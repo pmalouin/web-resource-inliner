@@ -27,10 +27,10 @@ util.defaults = {
 
 /**
  * Escape special regex characters of a particular string
- * 
+ *
  * @example
  * "http://www.test.com" --> "http:\/\/www\.test\.com"
- *     
+ *
  * @param  {String} str - string to escape
  * @return {String} string with special characters escaped
  */
@@ -83,7 +83,7 @@ util.getRemote = function( uri, callback, toDataUri )
     request(
         {
             uri: uri,
-            encoding: toDataUri ? "binary" : ""
+            encoding: toDataUri && "binary"
         },
         function( err, response, body )
         {
